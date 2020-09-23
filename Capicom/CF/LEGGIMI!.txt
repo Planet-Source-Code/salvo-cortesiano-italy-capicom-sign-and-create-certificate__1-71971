@@ -1,0 +1,70 @@
+
+Il calcolo del codice fiscale
+Il significato dettagliato delle singole componenti del codice fiscale è il seguente:
+
+COG NOM AA M GG L VVV K
+I primi tre caratteri del codice si ricavano dalla prima, seconda e terza consonante del Cognome
+Se le consonanti per il Cognome fossero meno di tre, si considerano anche le vocali nello stesso ordine.
+Se il Cognome fosse più corto di tre caratteri, invece, si aggiunge una X per ogni carattere mancante.
+Visto che il codice fiscale è l’identificativo personale dell’individuo, per le donne coniugate si considera il
+cognome da nubile. Nei Cognomi composti da più parti, non si considerano gli spazi intermedi (es.: De
+Marco sarà DeMarco).
+
+COG NOM AA M GG CCOM K
+I successivi tre caratteri del codice fiscale si ricavano dalla prima, dalla terza e dalla quarta consonante del
+Nome.
+
+Se le consonanti del Nome fossero solo tre, esse vengono considerate tutte nell'ordine in cui si presentano.
+Se le consonanti fossero meno di tre, si considerano le vocali nello stesso ordine, come per il cognome .
+Se l'intero Nome fosse più corto di tre caratteri, si aggiunge una X per ogni carattere mancante.
+Nei nomi composti da più parti, non si considerano gli spazi intermedi (es.: Carmine Michele Gabriele sarà
+CarmineMicheleGabriele)
+
+COG NOM AA M GG CCOM X
+Dopo i tre caratteri relativi al cognome e al nome inizia la parte relativa alla data di nascita. Vi sono adesso i
+due caratteri numerici relativi all'anno di nascita, non considerando il millennio (es.: 1975 diventa 75).
+
+COG NOM AA M GG CCOM X
+Il successivo carattere dopo l’anno di nascita è il mese di nascita, codificato come segue: al mese gennaio
+corrisponde il carattere A; al mese febbraio il carattere B; il carattere C a marzo; il carattere D ad aprile; la
+lettera E a maggio; H a giugno; L a luglio; M ad agosto;P a settembre; R a ottobre; S a novembre; T a
+dicembre.
+
+COG NOM AA M GG CCOM X
+Dopo il mese di nascita viene il giorno di nascita. Si considerano due caratteri numerici che corrispondono
+al giorno di nascita. Indispensabile qui risulta il sesso della persona, poiché, se è di sesso femminile,
+occorre aggiungere 40 al giorno di nascita. Ad esempio, per un uomo nato il 24/03/1975 si considera 24 ;
+per una donna nata il 24/03/1975 si considera 64.
+COG NOM AA M GG CCOM X
+
+Passiamo ora a considerare i caratteri successivi alla data di nascita. Vi sono quattro caratteri alfanumerici
+che corrispondono al codice del Comune di nascita, rilevato dai volumi dei codici dei comuni d’Italia e degli
+Stati esteri, redatti dalla Direzione Generale del Catasto. Esistono database in cui è presente la decodifica
+Comune - Codice Catastale. Tali database si possono facilmente reperire su internet.
+COG NOM AA M GG CCOM X
+
+L’ultimo carattere del codice fiscale è un carattere alfabetico di controllo, ottenuto convertendo i singoli
+caratteri in posizione pari in corrispondenti valori secondo i valori dell’Appendice A, ed i caratteri in
+posizione dispari secondo i valori dell’Appendice B. Sommando i valori ottenuti dalla conversione e
+dividendo tale somma per 26, prendiamo il resto della divisione: esso deve essere codificato secondo
+l’Appendice C. Si otterrà così un carattere alfabetico.
+Nei casi in cui si abbiano codici fiscali uguali (casi di omonimia e stessa data e luogo di nascita), si
+provvede a rendere univoco il codice fiscale rispetto ad uno già esistente. Per fare ciò si effettuano una o
+più sostituzioni dei caratteri numerici contenuti nel codice, a partire da destra, con i corrispondenti caratteri
+alfabetici secondo quanto definito nell’appendice D.
+
+APPENDICE A): decodifica in valore numerico dei caratteri alfanumerici di posizione pari:
+A=0; B=1; C=2; D=3; E=4; F=5; G=6; H=7; I=8; J=9; K=10; L=11; M=12; N=13; O=14; P=15; Q=16; R=17;
+S=18; T=19; U=20; V=21; W=22; X=23; Y=24; Z=25; 0=0; 1=1; 2=2; 3=3; 4=4; 5=5; 6=6; 7=7; 8=8; 9=9.
+APPENDICE B): decodifica in valore numerico dei caratteri alfanumerici di posizione dispari:
+A=1; B=0; C=5; D=7; E=9; F=13; G=15; H=17; I=19; J=21; K=2; L=4; M=18; N=20; O=11; P=3; Q=6; R=8;
+S=12; T=14; U=16; V=10; W=22; X=25; Y=24; Z=23; 0=1; 1=0; 2=5; 3=7; 4=9; 5=13; 6=15; 7=17; 8=19; 9=21.
+
+APPENDICE C): codifica del carattere di controllo:
+0=A; 1=B; 2=C; 3=D; 4=E; 5=F; 6=G; 7=H; 8=I; 9=J; 10=K; 11=L; 12=M; 13=N; 14=O; 15=P; 16=Q; 17=R;
+18=S; 19=T; 20=U; 21=V; 22=W; 23=X; 24=Y; 25=Z.
+APPENDICE D): sostituzioni da applicare in caso di codice fiscale doppio:
+0=L; 1=M; 2=N; 3=P; 4=Q; 5=R; 6=S; 7=T; 8=U; 9=V.
+
+info@netshadows.it
+salvocortesiano@netshadows.it
