@@ -1,0 +1,89 @@
+Signature Certified v1.0.2ß Signing and creates a digital "shrink-wrap" for code and content
+to protect software publishers and users when they download code!
+Digital signatures authenticate the source and verify the integrity of content:
+
+Small introduction on CAPICOM library:
+
+Schematized the functionality of CAPICOM:
+
+Digital signature with ASN.1 encoding and support to the standard PKCS # 7
+Support for smart-card recognized by Windows
+Symmetric key encryption
+Asymmetric Key Encryption (envelop)
+Calculating Hash -- This function i like it very much :)
+CodeSigning for Authenticode
+Utilities to support conversions of strings and generations of pseudo-random numbers
+Interfaces support the CryptoAPI and CAPICOM objects and vice versa
+Support X509 certificates
+Support to store certificates.
+Searches within the store
+Support for Certificate Policies, Application Policies and templates
+Support to export sensitive information via PFX and PKCS # 12
+Support for AES encryption (only on XP and above)
+
+How to install the CAPICOM library:
+-----------------------------------
+The first way simplest (for engineers) and is certainly faster than manually.
+This is the option that developers often use on their machines for development and testing
+or registration of a single file CAPICOM.DLL, using regsvr32.exe, put this DLL into path:
+C:\Program Files\Common Files\Microsoft\CAPICOM\
+At a command prompt, change the directory to the directory where CAPICOM.dll is stored
+and then enter the following command: regsvr32 CAPICOM.dll
+This is the latest DLL of CAPICOM v.2.1.0.2 and support Windows Vista :)
+or install the DLL with the Setup of the Application.
+A second way in enterprise environment is through the processes of software distribution.
+A third mode relates WEB based scenarios where do not have the opportunity to create a process
+of controlled deployment. In this case the installation is possible through the installation of
+the COM component using the tag:
+
+<object classid="clsid:A996E48C-D3DC-4244-89F7-AFA33EC60679"
+codebase = http://hostname/myApp/capicom.dll#version=2,1,0,2>
+
+The fourth mode also provides for the creation of a file. And through the INF utility makecab.exe
+or cabarc.exe, it generates a file CAB. You signed a File CAB with signcode.exe
+(The latest versions of these utilities are available into Microsoft Platform SDK.), and download
+from an HTML page. If you prefer to install the ActiveX using the file CAB, you can use the same
+CLSID in CAPICOM or generate one with the utility Guidgen.exe. The advantage of the third
+installation mode (file. CAB) is the smaller size of the component to Download.
+
+Example Code Limitations:
+-------------------------
+To provide more concise, more readable code, principles of good programming practice are not always followed
+in these examples. In particular, only limited error responses are shown. Working applications should always
+check returned error codes and perform appropriate actions when an error is encountered.
+Necessary Key Containers, Keys, and Certificates in CAPICOM. While some operations with CAPICOM objects
+can be done on any computer by any user, creating digital signatures and retrieving the plaintext content
+of an enveloped message using CAPICOM objects are certificate-based operations. The user who creates a digital
+signature and the user who retrieves the encrypted contents of an enveloped message must have a digital
+certificate with an available associated private key. If a certificate with an associated private key is
+not present, the cryptographic operation will fail. Users of CAPICOM applications must ensure that they have
+the appropriate certificate and available private key when the applications are running.
+
+The Sign Up Process:
+--------------------
+1.) Use Internet Explorer. You must use the same computer to apply for the certificate and obtain your digital ID file.
+After you obtain your digital ID, any computer can be used to sign files using your private key (PVK) and digital
+certificate (SPC) files. 
+2.) You will need to provide an email address, password, challenge phrase, and information about your company.
+The password will also be used later when you sign your applications. 
+3.) Your browser will generate a private key. The private key is known only to its owner. Make sure to mark the key
+as exportable. Save this private key (called mykey.pvk) to a local .pvk file. Make a back-up copy of this private
+key, as this key will be needed to sign code. If you ever lose this private key, you will be unable to sign code. 
+4.) Create and save a text file that contains the information (email address, password, challenge phrase, and information about your company) that will be associated with your private key (PVK) and Software Publishing Certificate (SPC). 
+5.) You will need to submit your payment so the Certificate Authority can process your application. 
+6.) You will need to fax or send information to the Certificate Authority so they can verify your identity.
+The verification process can take several days. 
+7.) After verification, the Certificate Authority will send you an email containing a Personal Identification Number (PIN). 
+8.) Follow the instructions in the email to retrieve your Software Publishing Certificate (SPC) called mycert.spc
+The SPC file is also called a digital ID or digital certificate. 
+9.) A copy of your private key (PVK), digital certificate (SPC), and text file with the associated information should
+be kept in a secure location (safe deposit box). If this information is ever lost or stolen, you should contact the
+Certificate Authority to prevent fraudulent use.
+
+Happy Coding ;)
+
+Salvo Cortesiano (IT)
+
+Links:
+http://www.microsoft.com/downloads/details.aspx?familyid=860EE43A-A843-462F-ABB5-FF88EA5896F6&displaylang=en
+http://www.wiscocomputing.com/articles/code-signing.htm
